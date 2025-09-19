@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ML API</title>
+    <title>Bank Insurance Prediction</title>
 </head>
-<body>
-    <div class="login">
-        <h1>Bank Insurance Prediction</h1>  
+<body style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #6dd5ed, #2193b0); height: 100vh; margin:0; display:flex; justify-content:center; align-items:center;">
+
+    <div style="background:white; padding:35px; border-radius:15px; box-shadow:0px 6px 20px rgba(0,0,0,0.3); width:350px; text-align:center;">
+        
+        <h1 style="color:#2193b0; margin-bottom:20px;">🏦 Bank Insurance Prediction</h1>
         
         <form action="{{ url_for('predict')}}" method="post">
-            <input type="text" name="AGE" placeholder="AGE" required="required" /><br>
-            <input type="text" name="SMOKER" placeholder="SMOKER (yes/no)" required="required" /><br>
-            <input type="text" name="BMI" placeholder="BMI" required="required" /><br>
-            <input type="text" name="SEX" placeholder="SEX (male/female)" required="required" /><br>
-            <input type="text" name="CHILDREN" placeholder="CHILDREN" required="required" /><br>
+            <input type="text" name="AGE" placeholder="Enter Age" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
 
-            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            <input type="text" name="SMOKER" placeholder="Smoker (yes/no)" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+            <input type="text" name="BMI" placeholder="Enter BMI" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+            <input type="text" name="SEX" placeholder="Sex (male/female)" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+            <input type="text" name="CHILDREN" placeholder="No. of Children" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+            <button type="submit"
+                style="background:#2193b0; color:white; border:none; padding:12px; margin-top:15px; border-radius:8px; font-size:16px; cursor:pointer; width:95%;">
+                🔮 Predict
+            </button>
         </form>
-        
-        <br>
-        <br>
-        
+
+        <div style="margin-top:20px; padding:12px; background:#f0f9ff; border-left:5px solid #2193b0; border-radius:8px; font-weight:bold; color:#333;">
+            {{prediction_text}}
+        </div>
     </div>
-    {{prediction_text}}  
 </body>
 </html>
