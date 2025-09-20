@@ -27,6 +27,6 @@ def predict():
     final_input=ss.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output=fmodel.predict(final_input)[0]
-    return render_template("home.html",prediction_text=" Health Insurance Prediction Is {}".format(output))
+    return render_template("home.html",prediction_text=" Health Insurance Prediction is {}".format(output))
 if __name__== "__main__":
     app.run(debug=True)

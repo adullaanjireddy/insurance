@@ -12,8 +12,23 @@
         
         <form action="{{ url_for('predict')}}" method="post">
             
-            <!-- Age -->
+               <!-- Age -->
             <input type="number" name="AGE" placeholder="Enter Age" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+
+                <!-- Sex Male/Female -->
+            <label style="display:block; text-align:left; margin-left:20px; font-size:14px; color:#2193b0;">Sex:</label>
+            <input type="radio" name="SEX" value="1" required> Male
+            <input type="radio" name="SEX" value="0"> Female <br><br>
+
+              <!-- BMI -->
+            <input type="number" step="0.1" name="BMI" placeholder="Enter BMI" required
+                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
+
+            
+              <!-- Children -->
+            <input type="number" name="CHILDREN" placeholder="No. of Children" required
                 style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
 
             <!-- Smoker Yes/No -->
@@ -24,18 +39,7 @@
                 <option value="0">No</option>
             </select><br>
 
-            <!-- BMI -->
-            <input type="number" step="0.1" name="BMI" placeholder="Enter BMI" required
-                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
 
-            <!-- Sex Male/Female -->
-            <label style="display:block; text-align:left; margin-left:20px; font-size:14px; color:#2193b0;">Sex:</label>
-            <input type="radio" name="SEX" value="1" required> Male
-            <input type="radio" name="SEX" value="0"> Female <br><br>
-
-            <!-- Children -->
-            <input type="number" name="CHILDREN" placeholder="No. of Children" required
-                style="width:90%; padding:12px; margin:8px 0; border:2px solid #2193b0; border-radius:8px; font-size:14px;"><br>
 
             <!-- Submit -->
             <button type="submit"
